@@ -1,0 +1,18 @@
+package com.freelancer.RealEstate.repository;
+
+import com.freelancer.RealEstate.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+/**
+ *
+ */
+@Repository
+public interface RegisterUserRepository extends JpaRepository<User, Integer> {
+
+    @Query(value = "SELECT * FROM tab_user WHERE username = ?", nativeQuery = true)
+    Optional<User> getRegisteredUserName(String userName);
+}

@@ -1,0 +1,822 @@
+2022-07-14 00:02:26.086  INFO 15636 --- [main] c.f.R.RealEstateApplication              : Starting RealEstateApplication using Java 1.8.0_251 on vikas with PID 15636 (D:\Freelancer\RealEstate\RealEstate\build\classes\java\main started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 00:02:26.096  INFO 15636 --- [main] c.f.R.RealEstateApplication              : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 00:02:27.005  INFO 15636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 00:02:27.113  INFO 15636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 14 JPA repository interfaces.
+2022-07-14 00:02:28.148  INFO 15636 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2022-07-14 00:02:28.170  INFO 15636 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-07-14 00:02:28.170  INFO 15636 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-14 00:02:28.529  INFO 15636 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-07-14 00:02:28.530  INFO 15636 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2392 ms
+2022-07-14 00:02:28.688  INFO 15636 --- [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 00:02:28.754  INFO 15636 --- [main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 00:02:28.989  INFO 15636 --- [main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 00:02:29.173  INFO 15636 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 00:02:29.175  WARN 15636 --- [main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 00:02:33.473  INFO 15636 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 00:02:33.535  INFO 15636 --- [main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 00:02:49.237  INFO 15636 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 00:02:49.261  INFO 15636 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:02:50.970  WARN 15636 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 00:02:51.332  INFO 15636 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 00:02:51.751  INFO 15636 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 00:02:51.752  INFO 15636 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 00:02:51.773  INFO 15636 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 00:02:51.842  INFO 15636 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 00:02:52.109  INFO 15636 --- [main] c.f.R.RealEstateApplication              : Started RealEstateApplication in 26.513 seconds (JVM running for 27.6)
+2022-07-14 00:05:30.987  INFO 15636 --- [http-nio-8080-exec-1] o.a.c.h.Http11Processor                  : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030x11mk0xa40x050xfd.0xf20x9f0xc10xb60xa4]0xd10xde0xcf0xfa0x800x1f0x03Wy0xe00x96rj0x95hl0xa80xf20x03 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_251]
+
+2022-07-14 00:05:51.454  INFO 15636 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 00:05:51.455  INFO 15636 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-07-14 00:05:51.501  INFO 15636 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed initialization in 45 ms
+2022-07-14 00:05:51.676  INFO 15636 --- [http-nio-8080-exec-4] c.f.R.s.I.PropertyServiceImpl            : In property converter service:{
+    "property_for": "For Sale",
+    "property_type": 1,
+    "transaction_type": "New Property",
+    "possession_status": "Under Construction",
+    "property_desc": "Wakad, pune is one of the most prestigious localities of pune ",
+    "age_of_property": "",
+    "ownership_status": "Freehold",
+    "is_feature_property": true,
+    "is_hot_listed": true,
+    "rent_lease_details": {
+        "monthlyRent": "",
+        "securityAmount": ""
+    },
+    "status_of_water": {
+        "waterAvailability": "12 Hours Available",
+        "electricityStatus": "Less Than 2 Hour Powercut"
+    },
+    "property_features": {
+        "Bedrooms": 1,
+        "Balconies": 1,
+        "floorNo": "Lower Basement",
+        "total_floor": 1,
+        "bathrooms": 2,
+        "furnishedStatus": "Furnished",
+        "furnishedAc": 1,
+        "furnishedBed": 1,
+        "furnishedWardrobe": 1,
+        "furnishedTv": 1,
+        "tower": 1
+    },
+    "bedroomsList": [
+        {
+            "length": "10",
+            "breadth": "12"
+        }
+    ],
+    "balcony_list": [
+        {
+            "length": "4",
+            "breadth": "5"
+        }
+    ],
+    "property_area": {
+        "superArea": "1200",
+        "super_major": "Sq-ft",
+        "builtUpArea": "1000",
+        "built_major": "Sq-ft",
+        "carpetArea": "800",
+        "carpet_major": "Sq-ft"
+    },
+    "price_details": {
+        "expectedPrice": "8000000",
+        "pricePerSqft": "10000.00",
+        "brokerageIncluded": "0",
+        "maintenenceCharges": "10000",
+        "maintenenceChargesPerYear": "Quarterly",
+        "brokerage": "No Brokerage",
+        "OtherCharges": "5000",
+        "priceIncludes": [
+            {
+                "id": "P1",
+                "name": "PLC",
+                "selected": false
+            },
+            {
+                "id": "P2",
+                "name": "Car Parking",
+                "selected": true
+            },
+            {
+                "id": "P3",
+                "name": "Club Membership",
+                "selected": false
+            }
+        ],
+        "stampDuty": "2",
+        "stampIncluded": 8160000,
+        "regCharge": "10000"
+    },
+    "ownerDetails": [
+        {
+            "name": "John",
+            "mobile": [
+                "9876543210"
+            ],
+            "email": [
+                "John@cena.com"
+            ]
+        }
+    ],
+    "is_property_active": true,
+    "extra_details": {
+        "approvedBy": "Ramanagara–Channapatna Urban Development Authority",
+        "facing": "East",
+        "landmarkNeighbourhood": "With 650 sq ft of area, this Unfurnished apartment is well equipped with all the modern amenities.\n                          The apartment has been listed at 46,00,000 inr.",
+        "teUsMore": "This is one of the most prestigious project in wakad, which is well equipped with all the modern amenities.\n  The apartment is located at 10th floor in a 11 storey building.",
+        "coOperative": "yes",
+        "Convenience": "yes",
+        "covered": false,
+        "input_covered": "",
+        "open": false,
+        "input_open": ""
+    },
+    "leaving_room_details": {
+        "length": "12",
+        "breadth": "15"
+    },
+    "lobby_details": {
+        "isAvailable": true,
+        "length": "4",
+        "breadth": "5"
+    },
+    "kitchen_details": {
+        "length": "12",
+        "breadth": "10"
+    },
+    "furnished_items": [
+        {
+            "id": "FIL1",
+            "name": "Fridge",
+            "selected": true
+        },
+        {
+            "id": "FIL2",
+            "name": "Sofa",
+            "selected": true
+        },
+        {
+            "id": "FIL3",
+            "name": "Washing Machine",
+            "selected": true
+        },
+        {
+            "id": "FIL4",
+            "name": "Dining Table",
+            "selected": true
+        },
+        {
+            "id": "FIL5",
+            "name": "Microwave",
+            "selected": true
+        },
+        {
+            "id": "FIL6",
+            "name": "Gas Connection",
+            "selected": true
+        },
+        {
+            "id": "FIL7",
+            "name": "Modular kitchen",
+            "selected": true
+        }
+    ],
+    "overlooking": [
+        {
+            "id": "OL1",
+            "name": "Garden/Park",
+            "selected": true
+        },
+        {
+            "id": "OL2",
+            "name": "Pool",
+            "selected": true
+        },
+        {
+            "id": "OL3",
+            "name": "Main Road",
+            "selected": false
+        }
+    ],
+    "flooring": [
+        {
+            "id": "F4",
+            "name": "Marble",
+            "selected": true
+        },
+        {
+            "id": "F6",
+            "name": "Mosaic",
+            "selected": true
+        },
+        {
+            "id": "F8",
+            "name": "Tiles/Kotah",
+            "selected": true
+        }
+    ],
+    "amenities": [
+        {
+            "id": "A4",
+            "name": "Cafeteria/Food Court",
+            "selected": true
+        },
+        {
+            "id": "A6",
+            "name": "Concierge Services",
+            "selected": true
+        },
+        {
+            "id": "A8",
+            "name": "DTH Television Facility",
+            "selected": true
+        },
+        {
+            "id": "A10",
+            "name": "Fingerprint Access",
+            "selected": true
+        }
+    ]
+}
+2022-07-14 00:05:52.230  INFO 15636 --- [http-nio-8080-exec-4] c.f.R.s.I.PropertyServiceImpl            : In the Service Impl of save property details
+2022-07-14 00:05:53.097  INFO 15636 --- [http-nio-8080-exec-4] c.f.R.s.I.PropertyServiceImpl            : propert details:com.freelancer.RealEstate.entity.Property@38e08df8
+2022-07-14 00:05:55.496  INFO 15636 --- [http-nio-8080-exec-4] c.f.R.s.I.PropertyServiceImpl            : Data saved in property service
+2022-07-14 00:15:27.674  INFO 29644 --- [main] c.f.R.RealEstateApplication              : Starting RealEstateApplication using Java 1.8.0_251 on vikas with PID 29644 (D:\Freelancer\RealEstate\RealEstate\build\classes\java\main started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 00:15:27.717  INFO 29644 --- [main] c.f.R.RealEstateApplication              : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 00:15:28.582  INFO 29644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 00:15:28.710  INFO 29644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 14 JPA repository interfaces.
+2022-07-14 00:15:29.554  INFO 29644 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2022-07-14 00:15:29.572  INFO 29644 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-07-14 00:15:29.572  INFO 29644 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-14 00:15:29.892  INFO 29644 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-07-14 00:15:29.892  INFO 29644 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2140 ms
+2022-07-14 00:15:30.030  INFO 29644 --- [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 00:15:30.101  INFO 29644 --- [main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 00:15:30.296  INFO 29644 --- [main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 00:15:30.391  INFO 29644 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 00:15:30.393  WARN 29644 --- [main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 00:15:34.691  INFO 29644 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 00:15:34.733  INFO 29644 --- [main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 00:15:54.294  INFO 29644 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 00:15:54.352  INFO 29644 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:15:55.703  WARN 29644 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 00:15:55.836  INFO 29644 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 00:15:56.104  INFO 29644 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 00:15:56.105  INFO 29644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 00:15:56.125  INFO 29644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 00:15:56.169  INFO 29644 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 00:15:56.337  INFO 29644 --- [main] c.f.R.RealEstateApplication              : Started RealEstateApplication in 29.076 seconds (JVM running for 29.938)
+2022-07-14 00:16:16.321  INFO 29644 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 00:16:16.357  INFO 29644 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-07-14 00:16:16.360  INFO 29644 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2022-07-14 00:16:16.481  INFO 29644 --- [http-nio-8080-exec-2] c.f.R.s.I.PropertyServiceImpl            : In property converter service:{
+    "property_for": "For Sale",
+    "property_type": 1,
+    "transaction_type": "New Property",
+    "possession_status": "Under Construction",
+    "property_desc": "Wakad, pune is one of the most prestigious localities of pune ",
+    "age_of_property": "",
+    "ownership_status": "Freehold",
+    "is_feature_property": true,
+    "is_hot_listed": true,
+    "rent_lease_details": {
+        "monthlyRent": "",
+        "securityAmount": ""
+    },
+    "status_of_water": {
+        "waterAvailability": "12 Hours Available",
+        "electricityStatus": "Less Than 2 Hour Powercut"
+    },
+    "property_features": {
+        "Bedrooms": 1,
+        "Balconies": 1,
+        "floorNo": "Lower Basement",
+        "total_floor": 1,
+        "bathrooms": 2,
+        "furnishedStatus": "Furnished",
+        "furnishedAc": 1,
+        "furnishedBed": 1,
+        "furnishedWardrobe": 1,
+        "furnishedTv": 1,
+        "tower": 1
+    },
+    "bedroomsList": [
+        {
+            "length": "10",
+            "breadth": "12"
+        }
+    ],
+    "balcony_list": [
+        {
+            "length": "4",
+            "breadth": "5"
+        }
+    ],
+    "property_area": {
+        "superArea": "1200",
+        "super_major": "Sq-ft",
+        "builtUpArea": "1000",
+        "built_major": "Sq-ft",
+        "carpetArea": "800",
+        "carpet_major": "Sq-ft"
+    },
+    "price_details": {
+        "expectedPrice": "8000000",
+        "pricePerSqft": "10000.00",
+        "brokerageIncluded": "0",
+        "maintenenceCharges": "10000",
+        "maintenenceChargesPerYear": "Quarterly",
+        "brokerage": "No Brokerage",
+        "OtherCharges": "5000",
+        "priceIncludes": [
+            {
+                "id": "P1",
+                "name": "PLC",
+                "selected": false
+            },
+            {
+                "id": "P2",
+                "name": "Car Parking",
+                "selected": true
+            },
+            {
+                "id": "P3",
+                "name": "Club Membership",
+                "selected": false
+            }
+        ],
+        "stampDuty": "2",
+        "stampIncluded": 8160000,
+        "regCharge": "10000"
+    },
+    "ownerDetails": [
+        {
+            "name": "John",
+            "mobile": [
+                "9876543210"
+            ],
+            "email": [
+                "John@cena.com"
+            ]
+        }
+    ],
+    "is_property_active": true,
+    "extra_details": {
+        "approvedBy": "Ramanagara–Channapatna Urban Development Authority",
+        "facing": "East",
+        "landmarkNeighbourhood": "With 650 sq ft of area, this Unfurnished apartment is well equipped with all the modern amenities.\n                          The apartment has been listed at 46,00,000 inr.",
+        "teUsMore": "This is one of the most prestigious project in wakad, which is well equipped with all the modern amenities.\n  The apartment is located at 10th floor in a 11 storey building.",
+        "coOperative": "yes",
+        "Convenience": "yes",
+        "covered": false,
+        "input_covered": "",
+        "open": false,
+        "input_open": ""
+    },
+    "leaving_room_details": {
+        "length": "12",
+        "breadth": "15"
+    },
+    "lobby_details": {
+        "isAvailable": true,
+        "length": "4",
+        "breadth": "5"
+    },
+    "kitchen_details": {
+        "length": "12",
+        "breadth": "10"
+    },
+    "furnished_items": [
+        {
+            "id": 2,
+            "name": "Washing Machine",
+            "selected": true
+        },
+        {
+            "id": 2,
+            "name": "Dining Table",
+            "selected": true
+        }
+    ],
+    "overlooking": [
+        {
+            "id": 1,
+            "name": "Garden/Park",
+            "selected": true
+        },
+        {
+            "id": 2,
+            "name": "Pool",
+            "selected": true
+        },
+        {
+            "id": 3,
+            "name": "Main Road",
+            "selected": false
+        }
+    ],
+    "flooring": [
+        {
+            "id": 1,
+            "name": "Marble",
+            "selected": true
+        },
+        {
+            "id": 2,
+            "name": "Mosaic",
+            "selected": true
+        },
+        {
+            "id": 3,
+            "name": "Tiles/Kotah",
+            "selected": true
+        }
+    ],
+    "amenities": [
+        {
+            "id": 7,
+            "name": "Cafeteria/Food Court",
+            "selected": true
+        },
+        {
+            "id": 8,
+            "name": "Concierge Services",
+            "selected": true
+        },
+        {
+            "id": 9,
+            "name": "DTH Television Facility",
+            "selected": true
+        },
+        {
+            "id": 10,
+            "name": "Fingerprint Access",
+            "selected": true
+        }
+    ]
+}
+2022-07-14 00:16:16.929  INFO 29644 --- [http-nio-8080-exec-2] c.f.R.s.I.PropertyServiceImpl            : In the Service Impl of save property details
+2022-07-14 00:16:19.130  INFO 29644 --- [http-nio-8080-exec-2] c.f.R.s.I.PropertyServiceImpl            : propert details:com.freelancer.RealEstate.entity.Property@45813a06
+2022-07-14 00:16:23.244  INFO 29644 --- [http-nio-8080-exec-2] c.f.R.s.I.PropertyServiceImpl            : Data saved in property service
+2022-07-14 00:18:14.921  INFO 33376 --- [Test worker] c.f.R.RealEstateApplicationTests         : Starting RealEstateApplicationTests using Java 1.8.0_251 on vikas with PID 33376 (started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 00:18:14.974  INFO 33376 --- [Test worker] c.f.R.RealEstateApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 00:18:16.341  INFO 33376 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 00:18:16.488  INFO 33376 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 14 JPA repository interfaces.
+2022-07-14 00:18:17.282  INFO 33376 --- [Test worker] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 00:18:17.366  INFO 33376 --- [Test worker] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 00:18:17.721  INFO 33376 --- [Test worker] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 00:18:17.958  INFO 33376 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 00:18:17.964  WARN 33376 --- [Test worker] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 00:18:23.915  INFO 33376 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 00:18:24.009  INFO 33376 --- [Test worker] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 00:18:38.091  INFO 33376 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 00:18:38.105  INFO 33376 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:18:40.741  WARN 33376 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 00:18:41.355  INFO 33376 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 00:18:42.501  INFO 33376 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 00:18:42.541  INFO 33376 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 00:18:42.629  INFO 33376 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 00:18:42.985  INFO 33376 --- [Test worker] c.f.R.RealEstateApplicationTests         : Started RealEstateApplicationTests in 28.591 seconds (JVM running for 30.761)
+2022-07-14 00:18:43.220  INFO 33376 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:18:43.223  INFO 33376 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-07-14 00:18:44.830  INFO 33376 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-07-14 00:27:56.200  INFO 30844 --- [Test worker] c.f.R.RealEstateApplicationTests         : Starting RealEstateApplicationTests using Java 1.8.0_251 on vikas with PID 30844 (started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 00:27:56.249  INFO 30844 --- [Test worker] c.f.R.RealEstateApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 00:27:57.567  INFO 30844 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 00:27:57.722  INFO 30844 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 14 JPA repository interfaces.
+2022-07-14 00:27:58.460  INFO 30844 --- [Test worker] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 00:27:58.546  INFO 30844 --- [Test worker] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 00:27:58.837  INFO 30844 --- [Test worker] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 00:27:58.982  INFO 30844 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 00:27:58.989  WARN 30844 --- [Test worker] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 00:28:04.941  INFO 30844 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 00:28:05.051  INFO 30844 --- [Test worker] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 00:28:24.609  INFO 30844 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 00:28:24.643  INFO 30844 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:28:26.405  WARN 30844 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 00:28:26.793  INFO 30844 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 00:28:27.515  INFO 30844 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 00:28:27.542  INFO 30844 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 00:28:27.608  INFO 30844 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 00:28:27.828  INFO 30844 --- [Test worker] c.f.R.RealEstateApplicationTests         : Started RealEstateApplicationTests in 32.071 seconds (JVM running for 34.413)
+2022-07-14 00:28:27.965  INFO 30844 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:28:27.968  INFO 30844 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-07-14 00:28:30.458  INFO 30844 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-07-14 00:34:27.698  INFO 24952 --- [main] c.f.R.RealEstateApplication              : Starting RealEstateApplication using Java 1.8.0_251 on vikas with PID 24952 (D:\Freelancer\RealEstate\RealEstate\build\classes\java\main started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 00:34:27.739  INFO 24952 --- [main] c.f.R.RealEstateApplication              : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 00:34:28.650  INFO 24952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 00:34:28.777  INFO 24952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 14 JPA repository interfaces.
+2022-07-14 00:34:29.605  INFO 24952 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2022-07-14 00:34:29.624  INFO 24952 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-07-14 00:34:29.625  INFO 24952 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-14 00:34:29.968  INFO 24952 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-07-14 00:34:29.968  INFO 24952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2190 ms
+2022-07-14 00:34:30.115  INFO 24952 --- [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 00:34:30.167  INFO 24952 --- [main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 00:34:30.344  INFO 24952 --- [main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 00:34:30.445  INFO 24952 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 00:34:30.447  WARN 24952 --- [main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 00:34:35.725  INFO 24952 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 00:34:35.756  INFO 24952 --- [main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 00:34:55.031  INFO 24952 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 00:34:55.053  INFO 24952 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:34:56.507  WARN 24952 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 00:34:56.693  INFO 24952 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 00:34:56.950  INFO 24952 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 00:34:56.950  INFO 24952 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 00:34:56.972  INFO 24952 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 00:34:57.026  INFO 24952 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 00:34:57.231  INFO 24952 --- [main] c.f.R.RealEstateApplication              : Started RealEstateApplication in 30.121 seconds (JVM running for 31.251)
+2022-07-14 00:35:59.883  INFO 24952 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 00:35:59.884  INFO 24952 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-07-14 00:35:59.884  INFO 24952 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2022-07-14 00:38:29.536  INFO 15040 --- [main] c.f.R.RealEstateApplication              : Starting RealEstateApplication using Java 1.8.0_251 on vikas with PID 15040 (D:\Freelancer\RealEstate\RealEstate\build\classes\java\main started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 00:38:29.546  INFO 15040 --- [main] c.f.R.RealEstateApplication              : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 00:38:30.308  INFO 15040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 00:38:30.411  INFO 15040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 14 JPA repository interfaces.
+2022-07-14 00:38:31.284  INFO 15040 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2022-07-14 00:38:31.309  INFO 15040 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-07-14 00:38:31.309  INFO 15040 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-14 00:38:31.661  INFO 15040 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-07-14 00:38:31.661  INFO 15040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2080 ms
+2022-07-14 00:38:31.782  INFO 15040 --- [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 00:38:31.841  INFO 15040 --- [main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 00:38:32.038  INFO 15040 --- [main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 00:38:32.153  INFO 15040 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 00:38:32.155  WARN 15040 --- [main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 00:38:36.849  INFO 15040 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 00:38:36.875  INFO 15040 --- [main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 00:39:33.726  INFO 15040 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 00:39:33.744  INFO 15040 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 00:39:34.857  WARN 15040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 00:39:34.971  INFO 15040 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 00:39:35.222  INFO 15040 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 00:39:35.223  INFO 15040 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 00:39:35.242  INFO 15040 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 00:39:35.286  INFO 15040 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 00:39:35.438  INFO 15040 --- [main] c.f.R.RealEstateApplication              : Started RealEstateApplication in 66.296 seconds (JVM running for 67.218)
+2022-07-14 00:39:58.854  INFO 15040 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 00:39:58.854  INFO 15040 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-07-14 00:39:58.855  INFO 15040 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2022-07-14 00:41:57.458  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.PropertyServiceImpl            : In property converter service:{
+    "property_for": "For Sale",
+    "property_type": 1,
+    "transaction_type": "New Property",
+    "possession_status": "Under Construction",
+    "property_desc": "Wakad, pune is one of the most prestigious localities of pune ",
+    "age_of_property": "",
+    "ownership_status": "Freehold",
+    "is_feature_property": true,
+    "is_hot_listed": true,
+    "rent_lease_details": {
+        "monthlyRent": "",
+        "securityAmount": ""
+    },
+    "status_of_water": {
+        "waterAvailability": "12 Hours Available",
+        "electricityStatus": "Less Than 2 Hour Powercut"
+    },
+    "property_features": {
+        "Bedrooms": 1,
+        "Balconies": 1,
+        "floorNo": "Lower Basement",
+        "total_floor": 1,
+        "bathrooms": 2,
+        "furnishedStatus": "Furnished",
+        "furnishedAc": 1,
+        "furnishedBed": 1,
+        "furnishedWardrobe": 1,
+        "furnishedTv": 1,
+        "tower": 1
+    },
+    "bedroomsList": [
+        {
+            "length": "10",
+            "breadth": "12"
+        }
+    ],
+    "balcony_list": [
+        {
+            "length": "4",
+            "breadth": "5"
+        }
+    ],
+    "property_area": {
+        "superArea": "1200",
+        "super_major": "Sq-ft",
+        "builtUpArea": "1000",
+        "built_major": "Sq-ft",
+        "carpetArea": "800",
+        "carpet_major": "Sq-ft"
+    },
+    "price_details": {
+        "expectedPrice": "8000000",
+        "pricePerSqft": "10000.00",
+        "brokerageIncluded": "0",
+        "maintenenceCharges": "10000",
+        "maintenenceChargesPerYear": "Quarterly",
+        "brokerage": "No Brokerage",
+        "OtherCharges": "5000",
+        "priceIncludes": [
+            {
+                "id": "P1",
+                "name": "PLC",
+                "selected": false
+            },
+            {
+                "id": "P2",
+                "name": "Car Parking",
+                "selected": true
+            },
+            {
+                "id": "P3",
+                "name": "Club Membership",
+                "selected": false
+            }
+        ],
+        "stampDuty": "2",
+        "stampIncluded": 8160000,
+        "regCharge": "10000"
+    },
+    "ownerDetails": [
+        {
+            "name": "John",
+            "mobile": [
+                "9876543210"
+            ],
+            "email": [
+                "John@cena.com"
+            ]
+        }
+    ],
+    "is_property_active": true,
+    "extra_details": {
+        "approvedBy": "Ramanagara–Channapatna Urban Development Authority",
+        "facing": "East",
+        "landmarkNeighbourhood": "With 650 sq ft of area, this Unfurnished apartment is well equipped with all the modern amenities.\n                          The apartment has been listed at 46,00,000 inr.",
+        "teUsMore": "This is one of the most prestigious project in wakad, which is well equipped with all the modern amenities.\n  The apartment is located at 10th floor in a 11 storey building.",
+        "coOperative": "yes",
+        "Convenience": "yes",
+        "covered": false,
+        "input_covered": "",
+        "open": false,
+        "input_open": ""
+    },
+    "leaving_room_details": {
+        "length": "12",
+        "breadth": "15"
+    },
+    "lobby_details": {
+        "isAvailable": true,
+        "length": "4",
+        "breadth": "5"
+    },
+    "kitchen_details": {
+        "length": "12",
+        "breadth": "10"
+    },
+    "furnished_items": [
+        {
+            "id": 2,
+            "name": "Washing Machine",
+            "selected": true
+        },
+        {
+            "id": 2,
+            "name": "Dining Table",
+            "selected": true
+        }
+    ],
+    "overlooking": [
+        {
+            "id": 1,
+            "name": "Garden/Park",
+            "selected": true
+        },
+        {
+            "id": 2,
+            "name": "Pool",
+            "selected": true
+        },
+        {
+            "id": 3,
+            "name": "Main Road",
+            "selected": false
+        }
+    ],
+    "flooring": [
+        {
+            "id": 1,
+            "name": "Marble",
+            "selected": true
+        },
+        {
+            "id": 2,
+            "name": "Mosaic",
+            "selected": true
+        },
+        {
+            "id": 3,
+            "name": "Tiles/Kotah",
+            "selected": true
+        }
+    ],
+    "amenities": [
+        {
+            "id": 7,
+            "name": "Cafeteria/Food Court",
+            "selected": true
+        },
+        {
+            "id": 8,
+            "name": "Concierge Services",
+            "selected": true
+        },
+        {
+            "id": 9,
+            "name": "DTH Television Facility",
+            "selected": true
+        },
+        {
+            "id": 10,
+            "name": "Fingerprint Access",
+            "selected": true
+        }
+    ]
+}
+2022-07-14 00:41:57.905  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.PropertyServiceImpl            : In the Service Impl of save property details
+2022-07-14 00:41:58.638  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.PropertyServiceImpl            : propert details:com.freelancer.RealEstate.entity.Property@7b1bc73d
+2022-07-14 00:41:58.638  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.PropertyServiceImpl            : In the file method
+2022-07-14 00:41:58.639  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.PropertyServiceImpl            : in the saveMediaFiles service:media
+2022-07-14 00:41:58.639  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.MediaServiceImpl               : In the final media upload
+2022-07-14 00:41:58.639  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.MediaServiceImpl               : In the try block of media upload
+2022-07-14 00:41:58.639  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.MediaServiceImpl               : For loop for upload:16577395186392-big.jpg
+2022-07-14 00:41:58.639  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.S3DocumentUploadServiceImpl    : in upload method of s3:16577395186392-big.jpg
+2022-07-14 00:41:58.930  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.S3DocumentUploadServiceImpl    : file url s3:real_estate_media/16577395186392-big.jpg
+2022-07-14 00:41:58.930  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.S3DocumentUploadServiceImpl    : in config of s3 bucket
+2022-07-14 00:42:03.037  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.MediaServiceImpl               : For loop for upload:16577395230373-small.jpg
+2022-07-14 00:42:03.037  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.S3DocumentUploadServiceImpl    : in upload method of s3:16577395230373-small.jpg
+2022-07-14 00:42:03.086  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.S3DocumentUploadServiceImpl    : file url s3:real_estate_media/16577395230373-small.jpg
+2022-07-14 00:42:03.087  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.S3DocumentUploadServiceImpl    : in config of s3 bucket
+2022-07-14 00:42:05.371  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.PropertyServiceImpl            : Response DTO of media upload:com.freelancer.RealEstate.model.ResponseDto@7388305a
+2022-07-14 00:42:05.371  INFO 15040 --- [http-nio-8080-exec-5] c.f.R.s.I.PropertyServiceImpl            : Data saved in property service
+2022-07-14 20:22:10.668  INFO 21276 --- [Test worker] c.f.R.RealEstateApplicationTests         : Starting RealEstateApplicationTests using Java 1.8.0_251 on vikas with PID 21276 (started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 20:22:10.807  INFO 21276 --- [Test worker] c.f.R.RealEstateApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 20:22:13.984  INFO 21276 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 20:22:14.188  INFO 21276 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 185 ms. Found 14 JPA repository interfaces.
+2022-07-14 20:22:15.269  INFO 21276 --- [Test worker] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 20:22:15.390  INFO 21276 --- [Test worker] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 20:22:15.899  INFO 21276 --- [Test worker] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 20:22:16.120  INFO 21276 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 20:22:16.126  WARN 21276 --- [Test worker] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 20:22:21.078  INFO 21276 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 20:22:21.182  INFO 21276 --- [Test worker] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 20:23:21.814  INFO 21276 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 20:23:21.849  INFO 21276 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 20:23:26.057  WARN 21276 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 20:23:27.004  INFO 21276 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 20:23:28.748  INFO 21276 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 20:23:28.823  INFO 21276 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 20:23:28.926  INFO 21276 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 20:23:29.431  INFO 21276 --- [Test worker] c.f.R.RealEstateApplicationTests         : Started RealEstateApplicationTests in 79.734 seconds (JVM running for 84.498)
+2022-07-14 20:23:29.737  INFO 21276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 20:23:29.739  INFO 21276 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-07-14 20:23:56.543  INFO 21276 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-07-14 20:23:56.594  INFO 21276 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-07-14 20:52:48.466  INFO 7412 --- [Test worker] c.f.R.RealEstateApplicationTests         : Starting RealEstateApplicationTests using Java 1.8.0_251 on vikas with PID 7412 (started by vikas in D:\Freelancer\RealEstate\RealEstate)
+2022-07-14 20:52:48.526  INFO 7412 --- [Test worker] c.f.R.RealEstateApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 20:52:51.246  INFO 7412 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 20:52:51.441  INFO 7412 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 14 JPA repository interfaces.
+2022-07-14 20:52:52.735  INFO 7412 --- [Test worker] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 20:52:52.919  INFO 7412 --- [Test worker] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 20:52:53.481  INFO 7412 --- [Test worker] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 20:52:53.767  INFO 7412 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-07-14 20:52:53.774  WARN 7412 --- [Test worker] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-14 20:52:57.734  INFO 7412 --- [Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-07-14 20:52:57.893  INFO 7412 --- [Test worker] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-14 20:53:55.353  INFO 7412 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 20:53:55.389  INFO 7412 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 20:53:58.164  WARN 7412 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 20:53:58.684  INFO 7412 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-07-14 20:53:59.897  INFO 7412 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-07-14 20:53:59.943  INFO 7412 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-14 20:54:00.101  INFO 7412 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-14 20:54:00.502  INFO 7412 --- [Test worker] c.f.R.RealEstateApplicationTests         : Started RealEstateApplicationTests in 72.922 seconds (JVM running for 77.568)
+2022-07-14 20:54:00.706  INFO 7412 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 20:54:00.707  INFO 7412 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-07-14 20:54:26.612  INFO 7412 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-07-14 20:54:26.655  INFO 7412 --- [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

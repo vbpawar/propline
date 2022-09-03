@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: real-estate
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://52.23.29.110:3306/propline-prod
+    username: propline-prod
+    password: Dlg41SD@y34Dn
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 500MB
+      max-request-size: 1000MB
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+  file:
+    name: /opt/tomcat/latest/logs/app_logs/real_state_propline_prod.log
+aws:
+  endpoint: propline_media_prod
+  accessKey: AKIA6GC7UF4GDGAWN6D5
+  secretKey: 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
+  bucket: preownedproperties.dev
+  region: us-east-1
+  imageUrl: https://s3.amazonaws.com/preownedproperties.dev/
+
+email:
+  address: vikaspawar3110@gmail.com,naresh.b.pawar.38@gmail.com,beldarmayuri1989@gmail.com,sales@preownedproperties.in
+  bcc: vikaspawar3110@gmail.com
+  username: sales@preownedproperties.in
+  password: Preowned@10000
+  host: smtpout.secureserver.net
+  subject: Email Recieve from Propline website
+
+jwt:
+  secret: javainuse

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.freelancer.RealEstate.controller.PropertyControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-08-15T17:11:56" hostname="VIKAS" time="0.003">
+  <properties/>
+  <testcase name="addProperty()" classname="com.freelancer.RealEstate.controller.PropertyControllerTest" time="0.0"/>
+  <testcase name="getProperties()" classname="com.freelancer.RealEstate.controller.PropertyControllerTest" time="0.0"/>
+  <testcase name="getPropertyByPropertyId()" classname="com.freelancer.RealEstate.controller.PropertyControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
